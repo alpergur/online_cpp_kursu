@@ -1,6 +1,6 @@
 // Klasik C döneminden gelen "eski stil fonksiyon tanımlamaları" (old style function definitions) C'de geçerliliğini koruyor.
 // C++ dilinde geçerli değil.
-// Yukarıdaki fonksiyon tanımı C'de geçerli, C++ dilinde geçersiz.
+// Aşağıdaki fonksiyon tanımı C'de geçerli, C++ dilinde geçersiz.
 
 
 sum(a, b, c)

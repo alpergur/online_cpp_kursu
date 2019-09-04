@@ -1,0 +1,12 @@
+override (C++11)
+final (C++11)
+audit (C++20)
+axiom (C++20)
+import (C++20)
+module (C++20)
+transaction_safe (TM TS)
+transaction_safe_dynamic (TM TS)
+
+
+Bu sözcükler belirli bir bağlamda kullandıklarında özel anlam taşıyorlar. 
+Bu bağlamların dışında isim (identifier) olarak kullanılabiliyorlar.

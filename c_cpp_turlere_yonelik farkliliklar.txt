@@ -1,0 +1,63 @@
+bool türü
+
+- C++'da bool bir anahtar sözcük. 
+
+- C++ dilinde bool işaretsiz bir tamsayı türüdür. (unsigned integer type)
+
+- false ve true anahtar sözcükleri bool türden sabitleri ifade ediyor.
+
+- Karşılaştırma operatörleri ve lojik operatörler C'de int türden, C++ dilinde ise bool türden değer üretiyorlar.
+
+- sizeof(bool) >= 1 olmak zorunda. (bool türü hemen her yerde 1 byte)
+
+- Diğer aritmetik türler ile bool türü arasında otomatik tür dönüşümü var. Dönüşüm gereken bağlamlarda
+	bool türden "true" değeri 1 değerine
+	bool türden "false" değeri 0 değerine dönüşüyor.
+
+-bool türünden pointer türlerine otomatik dönüşüm yok.
+
+-pointer türlerinden bool türüne otomatik tür dönüşümü var.
+	İşlev adresi ya da nesne adresi olan adresler "true" değerine NULL pointer (nullptr) olan adresler "false" değerine dönüşüyor.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+C'de karakter sabitlerinin türü int'tir. C++ dilinde ise karakter sabitlerinin türü char türüdür.
+
+3 ayrı char türü olduğunu hatırlayınız:
+	- char
+	- signed char
+	- unsigned char
+
+char türünün işaretli ya da işaretsiz olması derleyiciye bağlıdır. 
+Bu durumda karakter sabitleri C++ dilinde işaretli ya da işaretsiz tamsayı türünden olabilir.
+ 
+Aşağıdaki kodu C ve C++ derleyicilerinde ayrı ayrı derleyip çalıştırın:
+
+/*    örnek kod */
+#include <stdio.h>
+
+int main()
+{
+	printf("%zu\n", sizeof('A'));
+	printf("%zu\n", sizeof('\n'));
+	printf("%zu\n", sizeof('\x41'));
+	printf("%zu\n", sizeof('\102'));
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+enum türleri (enumarations)
+
+- C'de sizeof(enum T) == sizeof (int) olmak zorunda. C++'da böyle bir zorunluluk yok.
+
+- C++ dilinde enum türlerinde baz tür (underlying type) programcı tarafından seçilebiliyor.
+	enum Color : unsigned char {White, Black, Blue, Yellow, Red};
+
+- C dilinde enum türleri ve aritmetik türler arasında otomatik tür dönüşümü var. 
+
+- C++ dilinde aritmetik türlerden enum türlerine dönüşüm yok. (enum türlerinden aritmetik türlere otomatik dönüşüm C++ dilinde de var)
+
+- C++ dilinde C dilinde olmayan ve C++11 ile dile eklenen "enum class" (enum sınıfları) var. 
+enum sınıflarının C++ diline eklenmesi ile konvensiyonel enum türlerinin kullanımı çok azaldı.
+
+İlerleyen derslerimizde enum sınıflarını detaylı olarak öğreneceğiz.
+----------------------------------------------------------------------------------------------------------------------------------------
